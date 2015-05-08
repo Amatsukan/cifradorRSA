@@ -27,7 +27,8 @@ func findD(e int64,n int64) int64{
     var i,result int64
     result = 0
     for i = 2; result != 1; i++{
-        result = (e*i)%n	
+        if (e-i)%n == 0 
+           result = i	
     }
     return i
 }
